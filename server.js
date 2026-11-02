@@ -10,9 +10,6 @@ if (!PORT) {
 const startServer = async () => {
     try {
         await connectToDb();
-        // Display all book documents in the console for verification
-        // const books = await getDb().collection('books').find({}).toArray();
-        // console.log('Book documents:', books);
 
         app.listen(PORT, async() => {
             console.log(`Server listening at http://127.0.0.1:${PORT}`);
