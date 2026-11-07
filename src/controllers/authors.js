@@ -93,7 +93,7 @@ const deleteAuthorHandler = async (req, res) => {
         if (result.deletedCount === 0) {
             return res.status(404).json({ message: 'Author not found' });
         }
-        return res.status(204).json({ message: 'Author deleted successfully.' });
+        return res.status(204).end();
     } catch (error) {
         console.error('DELETE /authors/:id failed:', error.message);
         return res.status(500).json({ message: 'Unable to delete author.' });
